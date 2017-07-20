@@ -42,6 +42,27 @@ Open in browser
 Here you will see a form. Enter details and see the weather forcast.
 
 
+## To Be added features if time extends
+will butefy the view like changing background according to the weather
+will provide the user login and store the history and provide the relative data
+can provide the user with subscription option and send him weather alerts
+track current location and show current location forcast.
+weekly data analysis for a perticular location.
+
+
+* Beautyfy the application. (CSS improvements)
+
+* Implemente the user login feature, so that location can be analysed for user and can be notified time to time.
+
+* Can provide the user with subscription option and send him weather alerts.
+
+* Show location forcast with more intractive presentation, Like changing the background according to weather.
+
+* Track current location and provide forcast.
+
+* Weekly data analysis option.
+
+
 ## Author
 
 **Annu Yadav**
