@@ -45,25 +45,3 @@ Here you will see a form. Enter details and see the weather forcast.
 ## Author
 
 **Annu Yadav**
-
-
-## How to use
-* Enter in the directory application is cloned.
-* Run bundle install
-    cd /path/to/application
-    bundle
-* Copy config/database.yml.example to config/database.yml
-* Update the user and password in database.yml
-* Copy config/secrets.yml.example to config/secrets.yml
-* Create database and migrate.
-* Start the server.
-    rake db:create db:migrate
-    rails s
-
-* First sign up by entering the details.
-* Confirm the email.
-* Login with credentials
-* Add ToDo list, ToDo items.
-* Share ToDo with other user available on applications.
-* Add and remove ToDo items to the ToDo list.
-* Mark ToDo list done.
