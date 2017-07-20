@@ -35,6 +35,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # For styling
 gem 'bootstrap-sass', '~> 3.3.6'
 
+# For making api request to external app
+gem 'httparty'
+
 # For caching
 gem 'redis-namespace'
 gem 'redis-rails'

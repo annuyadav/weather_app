@@ -1,0 +1,52 @@
+<div class="col-md-12">
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= location.city %></h3>
+  </div>
+  <div class="panel-body">
+    <div class="col-md-4">
+      <div class="col-md-10 info">
+        <b>Country: </b> <%= location.country %>
+      </div>
+      <div class="col-md-10 info">
+        <b>Latitude: </b> <%= location.latitude %>
+      </div>
+      <div class="col-md-10 info">
+        <b>Longitude: </b> <%= location.longitude %>
+      </div>
+    </div>
+    <div class="col-md-8 weather_info">
+      <% location.weather.instance_values.each do |prop,val| %>
+          <% if val.is_a? Hash %>
+              <div class="col-md-12">
+                <span class="col-sm-6">
+                  <b><%= prop.titleize %>: </b>
+                </span>
+              <div class="col-md-10 info">
+                  <% val.each do |prop_name, prop_val| %>
+                    <div class="row">
+                    <span class="col-sm-4 text_right">
+                        <%= prop_name.titleize %> :
+                      </span>
+                      <span class="col-sm-6 text_left">
+                        <%= prop_val %>
+                      </span>
+                    </div>
+                  <% end %>
+              </div>
+              </div>
+          <% else %>
+              <div class="col-md-12">
+                <span class="col-sm-3">
+                  <b><%= prop.titleize %>: </b>
+                </span>
+                <span class="col-sm-9">
+                  <%= val %>
+                </span>
+              </div>
+          <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+</div>

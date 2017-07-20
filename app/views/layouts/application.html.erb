@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>WeatherApp</title>
+  <title>Weather Info</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+<%= render partial: 'shared/header' %>
+<%= render partial: 'shared/flash' unless flash.nil? %>
+<div class="container" id="body_container">
+  <%= yield %>
+</div>
 
 </body>
 </html>

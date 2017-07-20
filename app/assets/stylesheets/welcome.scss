@@ -1,0 +1,30 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.search_form{
+  border: 2px solid #efefef;
+  border-radius: 2px;
+  padding:30px 30px;
+}
+
+
+.info{
+  padding: 2px;
+}
+
+.float_right{
+  float: right;
+}
+
+.weather_info{
+  div{
+    padding: 3px;
+  }
+  .text_right{
+    text-align: right;
+  }
+  .text_left{
+    text-align: left;
+  }
+}
