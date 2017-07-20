@@ -19,11 +19,9 @@ class Location
 
   def fetch_info(query)
     _info = Rails.cache.read(query)
-    p "==============    _info  :  #{_info}   ===  #{query}"
     if _info.blank?
       _query_with_key = query + "&appid=#{WEATHER_APP['api_key']}"
       _url = [WEATHER_APP['url'], _query_with_key].join('?')
-      p "==============    _url  :  #{_url}"
       response = HTTParty.get(_url)
       _info = JSON.parse(response.body)
       Rails.cache.write(query, _info)
