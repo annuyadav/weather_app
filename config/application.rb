@@ -25,6 +25,7 @@ module WeatherApp
 
     #for caching
     config.cache_store = :redis_store, 'redis://localhost:6379/0/cache', { expires_in: 30.minutes }
+    config.web_console.development_only = false
 
   end
 end
