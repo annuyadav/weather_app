@@ -1,0 +1,83 @@
+<div class="col-md-4">
+</div>
+
+<div class="col-md-4 search_form">
+
+  <%= form_tag [:welcome, :location], role: 'form', class: 'form-horizontal', method: :post, remote: true do |f|%>
+      <div class="form-group">
+        <div class="input-group">
+          <% options = [['City and Country','city_country'], ['Latitude and Longitude','lat'], ['zip code', 'zip']] %>
+          <%= select_tag :search_option, options_for_select(options), class: 'form-control', id: 'select_option', onchange: 'show_hide(this);' , required: true %>
+          <span class="input-group-addon">Search Option</span>
+        </div>
+      </div>
+
+      <div class="group" id="city_country">
+        <div class="form-group">
+          <div class="input-group">
+            <%= text_field_tag :city, nil, placeholder: 'City', class: 'form-control' %>
+            <span class="input-group-addon">City Name</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-group">
+            <%= text_field_tag :country, nil, placeholder: 'Country', class: 'form-control'%>
+            <span class="input-group-addon">Country Name</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="group" id="lat">
+        <div class="form-group">
+          <div class="input-group">
+            <%= text_field_tag :latitude, nil, placeholder: 'Latitude', class: 'form-control' %>
+            <span class="input-group-addon">Latitude</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-group">
+            <%= text_field_tag :longitude, nil, placeholder: 'Longitude', class: 'form-control' %>
+            <span class="input-group-addon">Longitude</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="group" id="zip">
+        <div class="form-group">
+          <div class="input-group">
+            <%= text_field_tag :zip, nil, placeholder: 'Zip code', class: 'form-control' %>
+            <span class="input-group-addon">Zip</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-group">
+            <%= text_field_tag :country, nil, placeholder: 'Country', class: 'form-control' %>
+            <span class="input-group-addon">Country Name</span>
+          </div>
+        </div>
+      </div>
+
+      <div classs="form-group">
+        <%= submit_tag 'Show Weather', class: 'btn btn-primary pull-right'%>
+      </div>
+  <% end %>
+</div>
+
+<div class="col-md-4">
+</div>
+
+<script type="application/javascript">
+  function show_hide(element){
+    $('.group').hide();
+    $('#'+$(element).val()).show();
+  }
+
+  $(document).ready(function () {
+    $('.group').hide();
+    $('#city_country').show();
+  });
+</script>
+

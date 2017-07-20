@@ -35,14 +35,19 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # For styling
 gem 'bootstrap-sass', '~> 3.3.6'
 
+# For making api request to external app
+gem 'httparty'
+
 # For caching
 gem 'redis-namespace'
 gem 'redis-rails'
 
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+
+  gem 'rspec-rails', '~> 3.5'
+  gem 'rails-controller-testing'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
